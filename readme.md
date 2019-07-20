@@ -17,6 +17,7 @@
    * git cm -a --amend（前提不能push）否则会一堆冲突 rebase解决合并问题，如果想该已经push的commit信息，可以push -f
 * git 切换分支
    * git checkout dev（如果没有dev 则新建一个分支）
+   * git branch -a 显示本地和远端的分支
    * git branch -D dev（删除dev分支）
    * git branch --list(查看分支列表)
    * git remote prune origin 可以删除缓存的远端已经删除的分支
