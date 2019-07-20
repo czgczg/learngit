@@ -34,6 +34,7 @@
 * git cherry-pick commitId 将某个分支的一个commit拉取到当前分支
 * git pull --rebase 远端分支覆盖本地分支 本地修改放弃
 * git rebase -i id git合并提交信息（此命令会进入交互式命令行，然后会有提示p表示选中，s表示合并到上一次提交信息上，e表示修改档次的提条信息）see:https://www.jianshu.com/p/4a8f4af4e803
+* git rebase branch 合并新的commit到当前分支
 *  git reset head 恢复提交到暂存区的修改，重新回到工作区
    * git reset --hard versionnumber
   * git reset --hard HEAD^ (上一个版本就是HEAD^，上上一个版本就是HEAD^^)
