@@ -30,7 +30,6 @@
     完成撤销，同时将代码恢复到前一个commit_id对应的版本
     **还可以回退pull后的冲突到pull前的状态** 
   *  git reset id （可以做到回退到提交之前的状态，不影响工作区已经做出的更改。可以直接通过git commit 重新提交对本地代码的修改）
-
 * git push -f强制覆盖远程分支
 * git cherry-pick commitId 将某个分支的一个commit拉取到当前分支
 * git pull --rebase 远端分支覆盖本地分支 本地修改放弃
@@ -39,6 +38,7 @@
    * git reset --hard versionnumber
   * git reset --hard HEAD^ (上一个版本就是HEAD^，上上一个版本就是HEAD^^)
   * git checkout 是撤销本地暂存区的修改，使工作区clean
+  * git clean -df 强制清除未被追踪的文件
   *  git config --global alias.st status 给命令配置简写 全局生效
   * git reflog 查看过去操作日志，记录了历史记录 继续回到回退版本
   * git 从暂存区的提交 撤回到工作区状态  git reset id（上次提交的idhash值）
