@@ -35,6 +35,7 @@ git fetch --all后`Your branch is ahead of 'origin/test' by 1 commit.` 确保可
   - git reset id 可以（可以撤销提交，本地修改依然在，可以继续添加提交）
   - git reset head^ （撤销最新一次提交）
   - git checkout . （放弃本地工作区的修改）
+  - git reset . （撤销添加到暂存区文件，回到工作区）
 - git clean
   - git clean -n 显示将要删除的文件和目录
   - git clean -x 删除忽略文件和对git来说不识别的文件
