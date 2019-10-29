@@ -94,15 +94,18 @@ cherry-pick剪出某提交命令
 
 4. 如果分歧或者ahead/behind太多，切到tmp临时分支保留提交
 
-5. 切回主分支，git reset --hard lastCommitId。切到上次update的提交，保证和远端没有冲突，然后pull拉去最新更新，然后将tmp临时分支上的指定commit cherry-pick过来，即便有冲突，会提示冰自动合并，解决>>>>冲突后，再提交一次即可。
+5. 切回主分支，git reset --hard lastCommitId。切到上次update的提交，保证和远端没有冲突，然后pull拉去最新更新，然后将tmp临时分支上的指定commit cherry-pick过来，即便有冲突，会提示并自动合并，解决>>>>冲突后，add . 后git cherry-pick continue 可以追加到当前cherry的commit信息，修改后重新提交。
 
-   第二：仅仅是更新代码，本地不想提交
+   
+
+ 第二：仅仅是更新代码，本地不想提交
+
 
 1. git stash压栈
 2. git status 看到是新的干净状态
 3. git pull
 4. git stash pop
-5. 有冲突，会自动合并，解决完后，手动清理stash
+5. 有冲突，会自动合并，手动解决后添加到暂存区
 
 
 
