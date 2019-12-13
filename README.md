@@ -49,8 +49,18 @@ git fetch --all后`Your branch is ahead of 'origin/test' by 1 commit.` 确保可
   - *git checkout --orphan empty* 新建空的分支 然后移除里面文件成为真正的空分支
 - git remote
   - git remote rm origin删除本地关联的远端的分支
+
   - git remote -v 查看本地关联的远端分支
+
   - git remote add origin (your remote address)
+
+  - git push origin --delete test（删除remote分支）
+
+  - git branch -t origin/dev_child（从远端分支创建本地分支 省去了添加track分支）
+
+  - 
+    gitk --simplify-by-decoration --all （可以理出分支之间的基关系，因为分支之间是通过commitid来关联的，并没有明确的关系，要自己去看）
+    
 
 ### **冲突** 😭 😭 😭
 
@@ -96,7 +106,6 @@ cherry-pick剪出某提交命令
 
 5. 切回主分支，git reset --hard lastCommitId。切到上次update的提交，保证和远端没有冲突，然后pull拉去最新更新，然后将tmp临时分支上的指定commit cherry-pick过来，即便有冲突，会提示并自动合并，解决>>>>冲突后，add . 后git cherry-pick continue 可以追加到当前cherry的commit信息，修改后重新提交。
 
-   
 
  第二：仅仅是更新代码，本地不想提交
 
